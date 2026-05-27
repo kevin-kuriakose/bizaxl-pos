@@ -13,3 +13,10 @@ doc_events = {
         "on_cancel": "bizaxl_pos.bizaxl_pos.doctype.ba_pos_invoice.ba_pos_invoice.on_cancel_hook",
     }
 }
+
+fixtures = [
+    {"doctype": "Workspace", "filters": [["name", "in", ["POS"]]]},
+    {"doctype": "Notification", "filters": [["document_type", "in", [
+        "BA POS Invoice", "BA POS Closing Entry", "Cashier Shift"
+    ]]]},
+]
