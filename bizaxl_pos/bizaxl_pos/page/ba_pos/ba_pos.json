@@ -1,0 +1,15 @@
+{
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "Page",
+ "module": "BizAxl POS",
+ "name": "ba-pos",
+ "page_name": "ba-pos",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Accounts Manager"},
+  {"role": "Accounts User"},
+  {"role": "HR User"}
+ ],
+ "standard": "Yes",
+ "title": "BizAxl POS"
+}
