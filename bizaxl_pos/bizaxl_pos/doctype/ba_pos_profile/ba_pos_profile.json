@@ -1,0 +1,27 @@
+{
+ "name": "BA POS Profile",
+ "doctype": "DocType",
+ "module": "BizAxl POS",
+ "naming_rule": "By fieldname",
+ "autoname": "field:profile_name",
+ "fields": [
+  {"fieldname": "profile_name", "fieldtype": "Data", "label": "Profile Name", "reqd": 1, "unique": 1},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "BA Company", "reqd": 1},
+  {"fieldname": "col1", "fieldtype": "Column Break"},
+  {"fieldname": "warehouse", "fieldtype": "Link", "label": "Default Warehouse", "options": "BA Warehouse"},
+  {"fieldname": "currency", "fieldtype": "Link", "label": "Currency", "options": "BA Currency"},
+  {"fieldname": "sec_accounts", "fieldtype": "Section Break", "label": "Accounts"},
+  {"fieldname": "income_account", "fieldtype": "Link", "label": "Income Account", "options": "BA Account"},
+  {"fieldname": "expense_account", "fieldtype": "Link", "label": "Expense Account", "options": "BA Account"},
+  {"fieldname": "col2", "fieldtype": "Column Break"},
+  {"fieldname": "cash_account", "fieldtype": "Link", "label": "Cash Account", "options": "BA Account"},
+  {"fieldname": "write_off_account", "fieldtype": "Link", "label": "Write Off Account", "options": "BA Account"},
+  {"fieldname": "sec_tax", "fieldtype": "Section Break", "label": "Tax"},
+  {"fieldname": "taxes_and_charges", "fieldtype": "Link", "label": "Default Tax Template", "options": "BA Tax Template"},
+  {"fieldname": "is_active", "fieldtype": "Check", "label": "Is Active", "default": "1"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "HR Manager", "read": 1, "write": 1, "create": 1}
+ ]
+}

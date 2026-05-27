@@ -1,0 +1,30 @@
+{
+ "name": "BA POS Closing Entry",
+ "doctype": "DocType",
+ "module": "BizAxl POS",
+ "naming_rule": "By \"Naming Series\" field",
+ "autoname": "naming_series",
+ "is_submittable": 1,
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "BA-POSC-.YYYY.-", "reqd": 1},
+  {"fieldname": "pos_profile", "fieldtype": "Link", "label": "POS Profile", "options": "BA POS Profile", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "BA Company", "reqd": 1},
+  {"fieldname": "col1", "fieldtype": "Column Break"},
+  {"fieldname": "period_start_date", "fieldtype": "Datetime", "label": "Opening Time", "reqd": 1},
+  {"fieldname": "period_end_date", "fieldtype": "Datetime", "label": "Closing Time"},
+  {"fieldname": "sec_summary", "fieldtype": "Section Break", "label": "Summary"},
+  {"fieldname": "total_invoices", "fieldtype": "Int", "label": "Total Invoices", "read_only": 1},
+  {"fieldname": "net_total", "fieldtype": "Currency", "label": "Net Total", "read_only": 1},
+  {"fieldname": "grand_total", "fieldtype": "Currency", "label": "Grand Total", "read_only": 1},
+  {"fieldname": "col2", "fieldtype": "Column Break"},
+  {"fieldname": "opening_cash", "fieldtype": "Currency", "label": "Opening Cash"},
+  {"fieldname": "closing_cash", "fieldtype": "Currency", "label": "Closing Cash"},
+  {"fieldname": "cash_variance", "fieldtype": "Currency", "label": "Cash Variance", "read_only": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nSubmitted\nCancelled", "read_only": 1}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1, "delete": 1},
+  {"role": "Accounts Manager", "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1},
+  {"role": "HR User", "read": 1, "write": 1, "create": 1, "submit": 1}
+ ]
+}
